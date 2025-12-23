@@ -1,89 +1,57 @@
-﻿# 🏊‍♂️ Armed Forces Cup of Russia – Swimming Competition Results Calculator
+﻿@'# 🏊‍♂️ Кубок ВС РФ по плаванию
 
 <div align="center">
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey)
-![GUI](https://img.shields.io/badge/GUI-Tkinter-orange)
-![PDF](https://img.shields.io/badge/PDF-ReportLab-red)
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey.svg)
 
-**A professional desktop application for calculating and ranking team results in swimming competitions.**
+**Профессиональное приложение для подсчета командных результатов соревнований по плаванию**
 
 </div>
 
-## 📋 About The Project
+## 📋 Описание
+Приложение для автоматизации расчета командных результатов Кубка ВС РФ по плаванию среди мужчин. Программа позволяет вводить результаты команд, автоматически рассчитывать сумму 15 лучших результатов из 20 и генерировать итоговые отчеты в формате PDF.
 
-This application automates the scoring process for the **Armed Forces Cup of Russia swimming competition (men's events)**. It guides the user through inputting competition details, team names, and results, automatically calculates the sum of the **15 best scores out of 20** for each team, ranks them, and generates a polished, official PDF report.
+## ✨ Возможности
+- Ввод информации о соревнованиях (место, сроки, объект)
+- Поддержка до 100 команд
+- Автоматический расчет 15 лучших результатов из 20
+- Просмотр промежуточных результатов
+- Генерация PDF отчетов
+- Интуитивный графический интерфейс
 
-### ✨ Key Features
-- **✅ Step-by-Step Wizard**: Intuitive GUI built with Tkinter for easy data entry.
-- **✅ Smart Scoring Logic**: Automatically sorts 20 scores and sums the top 15 for each team.
-- **✅ Live Results Table**: Displays intermediate rankings while entering new teams.
-- **✅ Professional PDF Export**: Generates well-formatted result sheets using ReportLab.
-- **✅ Data Validation**: Ensures all inputs are correct before proceeding.
-- **✅ Single Executable**: Packaged into a standalone `.exe` file for easy distribution on Windows.
+## 🚀 Быстрый старт
+### Запуск готового приложения:
+1. Скачайте `SwimmingCupApp.exe` из [Releases](https://github.com/NoHead73/SwimmingCup/releases)
+2. Запустите файл
+3. Следуйте инструкциям в приложении
 
-## 🚀 Getting Started
-
-### Prerequisites
-*   **For running the app**: Just Windows.
-*   **For development**: Python 3.8+ and `pip`.
-
-### Installation & Run
-**Option A: Using the Pre-built Executable (Recommended for Users)**
-1.  Download the latest `SwimmingCupApp.exe` from the [Releases](../../releases) page.
-2.  Run the file – no installation required.
-
-**Option B: From Source (For Developers)**
+### Запуск из исходного кода:
 ```bash
-# Clone the repository
 git clone https://github.com/NoHead73/SwimmingCup.git
 cd SwimmingCup
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the application
 python swimming_cup_app.py
-🖥️ Usage
-The application follows a simple linear workflow:
-
-Competition Info: Enter location, dates, venue, and pool length.
-
-Team Count: Set the number of participating teams (1-100).
-
-Team Names: Enter names for each team. See a live ranking after each entry.
-
-Enter Scores: For each team, input 20 scores (0-999).
-
-Final Results: View the final ranking table.
-
-Export to PDF: Generate and save a professional results sheet.
-
-🛠️ Built With (Tech Stack)
-Python – The core programming language.
-
-Tkinter – Standard GUI library for the user interface.
-
-ReportLab – Powerful library for creating PDF documents.
-
-PyInstaller – Used to package the Python script into a standalone .exe file.
-
-📁 Project Structure
+📁 Структура проекта
 text
 SwimmingCup/
-├── swimming_cup_app.py    # Main application source code
-├── build_exe.py           # Script to build the executable
-├── requirements.txt       # Python dependencies (ReportLab, PyInstaller)
-├── icon.ico              # Application icon
-├── LICENSE               # MIT License
-└── README.md             # This file
-📄 License
-Distributed under the MIT License. See the LICENSE file for details.
+├── swimming_cup_app.py          # Основной код приложения
+├── build_exe.py                 # Скрипт сборки
+├── icon.ico                     # Иконка приложения
+├── requirements.txt             # Зависимости
+├── LICENSE                      # Лицензия MIT
+├── build/                       # Временные файлы сборки
+└── dist/                        # Готовый исполняемый файл
+🔧 Сборка
+bash
+# Установка зависимостей
+pip install -r requirements.txt
 
-👨‍💻 Author
+# Сборка исполняемого файла
+python build_exe.py
+📄 Лицензия
+MIT License. Подробнее в файле LICENSE.
+
+👨‍💻 Автор
 NoHead73
-
-GitHub: @NoHead73
-
+'@ | Out-File -FilePath $readmePath -Encoding UTF8 -Force
